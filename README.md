@@ -76,6 +76,30 @@ In your demo video, show whatever does work, then show the failing
 behavior and say what you have written in Status. Do not skip the
 failing part.
 
+## Grading
+
+Two grades, 100 points each. **The full grading sheet is posted with
+the exam on Gradescope**, so you can see exactly how every point is
+awarded before you start.
+
+**Code (100), graded from your last commit on `main` before the deadline:**
+
+| Points | What |
+|---:|---|
+| 30 | **GitHub Actions green check on that commit.** This is the "assembles" score. A red X on your final commit is 0 here, so check the Actions tab before the deadline. |
+| 6 | firmware hex produced by that build |
+| 24 | automated static checks (the required structures are present) |
+| 30 | `WRITEUP.md` answers to the handout questions |
+| 2 | `WRITEUP.md` AI usage acknowledgment |
+| 8 | `WRITEUP.md` Status section: what works, what does not, diagnosis with evidence, what you tried, plan to fix. Fully working plus a one-line status is 8/8. |
+
+A missing `WRITEUP.md` scores 0 on all 40 write-up points.
+
+**Demo (100), graded from your video:** each scenario is scored on what
+is shown working. A scenario that fails must be shown and narrated as
+described in your Status section. A failing scenario that is skipped or
+hidden scores 0 for that scenario.
+
 ## Submitting
 
 There is nothing to upload for the code. **Push it here.** The last
