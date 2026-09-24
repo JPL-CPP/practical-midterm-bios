@@ -30,7 +30,7 @@ debugging problems do not eat your last two days.
 4. Every push is compiled automatically — check the **Actions** tab. A
    green check means it assembles and produces firmware. A red X links
    to the assembler errors. **Green is required but is not the grade.**
-   Behavior is graded from your video.
+   Behavior is graded from your video; code is graded from this repo.
 
 ## What must be in the repository
 
@@ -78,15 +78,20 @@ failing part.
 
 ## Submitting
 
-Two Canvas assignments, both due at the same deadline:
+There is nothing to upload for the code. **Push it here.** The last
+commit on `main` before the deadline is the one that is graded, straight
+from this repository. Make sure it has a green check and that
+`WRITEUP.md` is in it.
 
-1. **Midterm: Code** — the URL of your final commit (repository page →
-   Commits → click the commit → copy the browser URL; it must contain
-   `/commit/`). Push, wait for the green check, then submit.
-2. **Midterm: Demo** — your video, one continuous take, five minutes or
-   less, opening on that same commit hash on screen, narrated by you.
+The demo video is submitted on **Gradescope**, as a link: one
+continuous take, five minutes or less, opening on the commit hash of
+your final commit on screen, narrated by you. Use a link that the
+instructor can open without requesting access (an unlisted YouTube
+video, or a Drive link shared with "anyone with the link").
 
-Canvas's timestamp is the official submission time.
+The Gradescope timestamp is the official submission time for the demo;
+the commit timestamp on `main` is the official submission time for the
+code. Commits pushed after the deadline are not graded.
 
 ## Individual work and collaboration policy
 
