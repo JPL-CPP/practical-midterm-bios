@@ -1,7 +1,7 @@
-# ECE 3301L — Lab 12: Write Your Own BIOS (pure assembly)
+# ECE 3301L — Practical Midterm: Write Your Own BIOS (pure assembly)
 
 Starter code for the PIC18F46K22 (MPLAB X + XC8 v3.10).
-MPLAB project(s) in this repo: `Lab12.X`.
+MPLAB project(s) in this repo: `PracticalMidterm.X`.
 
 ## Getting the code
 
@@ -22,7 +22,7 @@ committed anywhere else is not graded.
 3. Commit and push as you go:
 
    ```bash
-   git add Lab12.X
+   git add PracticalMidterm.X
    git commit -m "describe what you did"
    git push
    ```

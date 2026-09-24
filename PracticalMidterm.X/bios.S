@@ -2,7 +2,7 @@
 ; File:   bios.S
 ; Author: <your names here>
 ;
-; Lab 12 - "Write Your Own BIOS": Reset, Vectors, and POST
+; ECE 3301L Practical Midterm - "Write Your Own BIOS": Reset, Vectors, and POST
 ; ECE 3301L - Introduction to Microcontrollers Laboratory
 ;
 ; Pure-assembly boot firmware for the PIC18F46K22. You are the BIOS
