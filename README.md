@@ -1,46 +1,119 @@
-# ECE 3301L — Practical Midterm: Write Your Own BIOS (pure assembly)
+# ECE 3301 — Practical Midterm (individual repository)
 
-Starter code for the PIC18F46K22 (MPLAB X + XC8 v3.10).
-MPLAB project(s) in this repo: `PracticalMidterm.X`.
+This repository is **yours alone**. It holds `PracticalMidterm.X`:
+"Write Your Own BIOS" for the PIC18F46K22, in pure assembly. Everyone
+starts from this same starter code.
 
-## Getting the code
+| | |
+|---|---|
+| Opens | Tuesday, September 29, 2026 |
+| Due | **Monday, October 5, 2026, 11:59 PM PT** |
+| Theory Exam (separate, on Gradescope) | opens Sept 29, due Thursday, October 1, 11:59 PM PT |
 
-This lab is **released into your team's private pair repository**
-(`ece3301l-pair-NN`) when the lab opens — just `git pull` there.
-This public repo is a reference copy you can browse or download
-(green **Code** button → Download ZIP) if you want to look ahead or
-work on a machine before your pair repo is set up.
+You have about one week. The practical is deliberately more involved
+than a weekly lab. Start early so hardware, toolchain, dependency and
+debugging problems do not eat your last two days.
 
-**All graded work must be committed to your pair repository** — work
-committed anywhere else is not graded.
+## Workflow
 
-## Doing the lab
-
-1. In your pair repo, open the project folder in MPLAB X.
-2. Complete every `TODO` in the source file. The comments walk you
-   through the steps; the datasheet and lab handout have the details.
-3. Commit and push as you go:
+1. Clone this repo and open `PracticalMidterm.X` in MPLAB X.
+2. Complete every `TODO` in `bios.S`. The comments walk you through the
+   steps; the midterm handout has the details and the rubric.
+3. Commit and push to `main` as you work:
 
    ```bash
    git add PracticalMidterm.X
-   git commit -m "describe what you did"
+   git commit -m "POST: RAM test passes"
    git push
    ```
 
-4. Check the **Actions** tab after each push. A green check means your
-   code compiles and produces firmware. A red X links to the compiler
-   errors. **Green is required but is not the grade** — correct
-   behavior is checked on hardware in lab.
+4. Every push is compiled automatically — check the **Actions** tab. A
+   green check means it assembles and produces firmware. A red X links
+   to the assembler errors. **Green is required but is not the grade.**
+   Behavior is graded from your video.
+
+## What must be in the repository
+
+- `PracticalMidterm.X/bios.S` — your firmware.
+- `PracticalMidterm.X/WRITEUP.md` — your write-up, in your own words,
+  quoting your own code. A commit without `WRITEUP.md` scores 0 on the
+  written part. It must contain these sections, in this order:
+
+  1. **Answers** to the questions in the handout.
+  2. **AI usage acknowledgment** (see below).
+  3. **Status** (see "If it is not finished" below). If everything
+     works, one line saying so.
+
+## AI usage acknowledgment
+
+Include a brief AI usage acknowledgment in `WRITEUP.md`.
+
+If you used AI tools at any point, state briefly how, for example:
+debugging assistance, explaining an error message, clarifying a
+microcontroller concept, checking syntax, helping interpret
+documentation. Your final implementation must still be your own work,
+and you must be able to explain every line you submit.
+
+If you did not use AI tools, write: *No AI tools were used.*
+
+## If it is not finished
+
+An honest, specific account of unfinished work earns partial credit. A
+video of something that does not work, with no explanation, does not.
+If any part is incomplete or misbehaving at the deadline, add to the
+**Status** section of `WRITEUP.md`:
+
+- **What works and what does not.** Name the exact stage or scenario
+  (e.g. "RAM test passes; the INT0 handler fires but RD7 never blinks").
+- **Why you think it fails.** Your best diagnosis, with the evidence:
+  what you observed, what you measured, what the assembler or the board
+  told you.
+- **What you tried.** The things you changed and what happened.
+- **Plan to fix it.** The concrete next steps you would take with more
+  time.
+
+In your demo video, show whatever does work, then show the failing
+behavior and say what you have written in Status. Do not skip the
+failing part.
 
 ## Submitting
 
-1. Push your final version and wait for the green check.
-2. On your pair repo's page: **Commits** → click your final commit →
-   copy the browser URL. It must contain `/commit/`, like
-   `https://github.com/JPL-CPP/ece3301l-pair-17/commit/a9c34f2...`
-3. **One partner** pastes that URL into the Canvas assignment before
-   the deadline. Canvas's timestamp is the official submission time.
-4. Demo the working hardware to the instructor/TA during lab checkoff.
+Two Canvas assignments, both due at the same deadline:
 
-Both partners must contribute commits — commit history is part of the
-grade record.
+1. **Midterm: Code** — the URL of your final commit (repository page →
+   Commits → click the commit → copy the browser URL; it must contain
+   `/commit/`). Push, wait for the green check, then submit.
+2. **Midterm: Demo** — your video, one continuous take, five minutes or
+   less, opening on that same commit hash on screen, narrated by you.
+
+Canvas's timestamp is the official submission time.
+
+## Individual work and collaboration policy
+
+The code you submit must be your own implementation. Similarity that
+comes from the provided starter code is expected; the code you add,
+modify and develop must be yours.
+
+You **may** talk with classmates about: hardware setup and connections;
+general design ideas; problems or symptoms you hit while debugging;
+troubleshooting strategies; toolchain, compiler, driver or dependency
+issues; how a peripheral or microcontroller concept works.
+
+You **may not**: share or copy source code; send code files to another
+student; copy another student's implementation; share screenshots
+containing substantial portions of your code; write the code together
+and then tweak it into separate submissions; share a complete
+algorithm, pseudocode or step-by-step solution that hands someone the
+implementation; split the exam among several people and combine the
+work.
+
+The rule of thumb: you may help someone understand *why* something is
+not working or discuss the general engineering approach, but each
+person decides independently how to implement it and writes their own
+code. Commit histories make copying easy to detect.
+
+## Housekeeping
+
+- Do not modify `.github/workflows/`.
+- Do not commit MPLAB `build/`, `dist/` or `debug/` folders (the
+  `.gitignore` already prevents this).
